@@ -1,4 +1,4 @@
 #!/bin/bash
-git pull -ff
+git pull origin $(git symbolic-ref --short HEAD)
 git add -A && git commit -am "$1"
 git push origin $(git symbolic-ref --short HEAD)
